@@ -13,6 +13,7 @@
 		D5FE86A31E3AA1FD0066C071 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5FE86A21E3AA1FD0066C071 /* Assets.xcassets */; };
 		D5FE86A61E3AA1FD0066C071 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5FE86A41E3AA1FD0066C071 /* LaunchScreen.storyboard */; };
 		D5FE86B21E3AB4160066C071 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FE86B11E3AB4160066C071 /* RoundedButton.swift */; };
+		D5FE86B41E3AD8060066C071 /* test.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D5FE86B31E3AD8060066C071 /* test.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D5FE86A51E3AA1FD0066C071 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5FE86A71E3AA1FD0066C071 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5FE86B11E3AB4160066C071 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		D5FE86B31E3AD8060066C071 /* test.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				D5FE869B1E3AA1FD0066C071 /* AppDelegate.swift */,
 				D5FE86A21E3AA1FD0066C071 /* Assets.xcassets */,
 				D5FE86A71E3AA1FD0066C071 /* Info.plist */,
+				D5FE86B31E3AD8060066C071 /* test.m4a */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5FE86B41E3AD8060066C071 /* test.m4a in Resources */,
 				D5FE86A61E3AA1FD0066C071 /* LaunchScreen.storyboard in Resources */,
 				D5FE86A31E3AA1FD0066C071 /* Assets.xcassets in Resources */,
 				D5FE86A11E3AA1FD0066C071 /* Main.storyboard in Resources */,

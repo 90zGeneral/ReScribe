@@ -98,6 +98,10 @@
                             <constraint firstItem="h1B-XM-9Eu" firstAttribute="top" secondItem="9ve-UI-bVp" secondAttribute="bottom" constant="20" id="yRs-K4-VyV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="TranscribeTextField" destination="h1B-XM-9Eu" id="XxP-0E-28Y"/>
+                        <outlet property="spinner" destination="meW-N2-IGs" id="qMg-rW-7EP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
