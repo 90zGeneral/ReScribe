@@ -43,21 +43,6 @@
                                     <constraint firstItem="IwJ-DD-EH5" firstAttribute="centerX" secondItem="9ve-UI-bVp" secondAttribute="centerX" id="qai-Ba-RfR"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUv-cA-28t">
-                                <rect key="frame" x="130" y="462" width="60" height="60"/>
-                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="YzA-JG-4B0"/>
-                                    <constraint firstAttribute="height" constant="60" id="kvF-O0-eAG"/>
-                                </constraints>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tap the button below to Transcribe your audio recordings." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="h1B-XM-9Eu">
-                                <rect key="frame" x="16" y="80" width="288" height="362"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ReScribe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBD-Px-4oD">
                                 <rect key="frame" x="115" y="530" width="90" height="30"/>
                                 <constraints>
@@ -68,15 +53,44 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUv-cA-28t" customClass="RoundedButton" customModule="ReScribe" customModuleProvider="target">
+                                <rect key="frame" x="130" y="462" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="YzA-JG-4B0"/>
+                                    <constraint firstAttribute="height" constant="60" id="kvF-O0-eAG"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="meW-N2-IGs">
+                                <rect key="frame" x="130" y="462" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Lls-De-scI"/>
+                                    <constraint firstAttribute="height" constant="60" id="m9X-aj-l6i"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tap the button below to Transcribe your audio recordings." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="h1B-XM-9Eu">
+                                <rect key="frame" x="16" y="80" width="288" height="362"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wBD-Px-4oD" secondAttribute="bottom" constant="8" id="3r7-eX-zQz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="h1B-XM-9Eu" secondAttribute="trailing" id="3vy-od-lK0"/>
                             <constraint firstItem="9ve-UI-bVp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Bcn-jQ-eiD"/>
+                            <constraint firstItem="wUv-cA-28t" firstAttribute="centerY" secondItem="meW-N2-IGs" secondAttribute="centerY" id="Hjw-ry-PEK"/>
                             <constraint firstItem="wBD-Px-4oD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KJn-Um-QLH"/>
                             <constraint firstItem="h1B-XM-9Eu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="SfT-KF-B8g"/>
                             <constraint firstItem="9ve-UI-bVp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Sp4-ot-cAA"/>
+                            <constraint firstItem="wUv-cA-28t" firstAttribute="centerX" secondItem="meW-N2-IGs" secondAttribute="centerX" id="VYq-cB-oGr"/>
                             <constraint firstItem="wBD-Px-4oD" firstAttribute="top" secondItem="wUv-cA-28t" secondAttribute="bottom" constant="8" id="g0O-jd-HKH"/>
                             <constraint firstItem="wUv-cA-28t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hsh-vj-AS3"/>
                             <constraint firstAttribute="trailing" secondItem="9ve-UI-bVp" secondAttribute="trailing" id="seL-Tv-yJA"/>
