@@ -10,11 +10,11 @@ import UIKit
 import Speech
 import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     //Outlets
     @IBOutlet weak var spinner: UIActivityIndicatorView!
-    @IBOutlet weak var TranscribeTextField: UITextView!
+    @IBOutlet weak var transcribeTextField: UITextView!
     
     //Declare an audio player
     var audioPlayer: AVAudioPlayer!
@@ -22,6 +22,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        spinner.isHidden = true
+        
+        
+    }
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        
+        //Look for an instance of AVAudioPlayer and apply the stop method on it
+        player.stop()
+        
+        spinner.stopAnimating()
         spinner.isHidden = true
     }
     
@@ -37,6 +48,7 @@ class ViewController: UIViewController {
                     do {
                         let sound = try AVAudioPlayer(contentsOf: path)
                         self.audioPlayer = sound
+                        self.audioPlayer.delegate = self
                         sound.play()
                     }catch {
                         print(error.localizedDescription)
@@ -48,11 +60,21 @@ class ViewController: UIViewController {
                     recognizer?.recognitionTask(with: request) { (result, error) in
                         if let error = error {
                             print("Sorry, we've got a problem here: \(error)")
+                        }else {
+                            self.transcribeTextField.text = result?.bestTranscription.formattedString
                         }
                     }
                 }
             }
         }
     }
+    
+    //Execute on button press
+    @IBAction func playBtnPressed(_ sender: UIButton) {
+        spinner.isHidden = false
+        spinner.startAnimating()
+        speechAuthRequest()
+    }
+    
 }
 
